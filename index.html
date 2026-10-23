@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#182b21">
+  <meta name="description" content="Пиксельная книга достижений Димы и Кристины в стиле Minecraft.">
+  <title>Книга достижений — Дима и Кристина</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="world-bg" aria-hidden="true"></div>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand"><span class="grass-icon" aria-hidden="true"></span><div><strong>КНИГА ДОСТИЖЕНИЙ</strong><small>ДИМА × КРИСТИНА</small></div></div>
+      <button class="sound-toggle" id="contentsBtn" type="button" aria-expanded="false">☰ <span>Содержание</span></button>
+    </header>
+    <section class="hero" aria-label="Интерактивная книга">
+      <div class="eyebrow"><span class="pixel-dot"></span> НАША ИСТОРИЯ · С 2024 ГОДА</div>
+      <h1>Маленькие моменты.<br><span>Большая история.</span></h1>
+      <p class="intro">Каждый разворот — отдельное достижение, которое хочется сохранить.</p>
+      <div class="book-frame" id="bookFrame">
+        <div class="book-topline"><span id="chapterLabel">ОБЛОЖКА</span><span class="page-counter" id="pageCounter">01 / 08</span></div>
+        <div class="book-stage">
+          <button class="arrow arrow-left" id="prevBtn" type="button" aria-label="Предыдущая страница" disabled>‹</button>
+          <figure class="spread-wrap" id="spreadWrap">
+            <img id="spreadImage" src="assets/cover.webp" alt="Обложка книги достижений Димы и Кристины" draggable="false">
+            <div class="image-fallback" id="imageFallback" hidden>Здесь появится страница книги</div>
+          </figure>
+          <button class="arrow arrow-right" id="nextBtn" type="button" aria-label="Следующая страница">›</button>
+        </div>
+        <div class="book-controls">
+          <div class="progress-track" aria-label="Прогресс просмотра"><span id="progressBar"></span></div>
+          <div class="control-row"><span class="hint">← → или кнопки для перелистывания</span><div class="buttons"><button class="pixel-btn secondary" id="firstBtn" type="button">В НАЧАЛО</button><button class="pixel-btn" id="nextTextBtn" type="button">ЛИСТАТЬ →</button></div></div>
+        </div>
+      </div>
+      <p class="footnote"><span class="heart">♥</span> Сделано с любовью и воксельным настроением.</p>
+    </section>
+    <aside class="contents-panel" id="contentsPanel" hidden>
+      <div class="contents-head"><h2>Содержание</h2><button id="closeContents" type="button" aria-label="Закрыть содержание">×</button></div>
+      <div id="contentsList" class="contents-list"></div>
+    </aside>
+    <footer>PERSONAL WORLD · DIMA & KRISTINA</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
